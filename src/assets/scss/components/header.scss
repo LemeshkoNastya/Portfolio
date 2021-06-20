@@ -5,6 +5,26 @@
     &__menu {
         width: 1170px;
         margin: 0 auto;
+
+        @include resolution(big-desktop) {
+            width: 1000px;
+        }
+
+        @include resolution(desktop) {
+            width: 800px;
+        }
+
+        @include resolution(small-desktop) {
+            width: 600px;
+        }
+
+        @include resolution(tablet) {
+            width: 400px;
+        }
+
+        @include resolution(big-mobile) {
+            display: none;
+        }
     }
 
     &__list {
@@ -20,6 +40,14 @@
             color: $color-white;
             @include typography(montserrat-16);
             transition: all 1s;
+
+            @include resolution(desktop) {
+                font-size: 14px;
+            }
+
+            @include resolution(tablet) {
+               font-size: 12px;
+            }
 
             &:hover {
                 border-bottom: 1px solid transparent;
