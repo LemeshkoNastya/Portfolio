@@ -1,0 +1,48 @@
+@mixin resolution($breakpoint) {
+    @if $breakpoint == big-desktop {
+        @media only screen and (min-width: 1800px) {
+          @content;
+        }
+    }
+    @if $breakpoint == desktop {
+        @media (max-width: 1200px) {
+          @content;
+        }
+    }
+    @if $breakpoint == small-desktop {
+        @media (max-width: 992px) {
+              @content;
+        }
+    }
+    @if $breakpoint == tablet {
+        @media (max-width: 768px) {
+              @content;
+        }
+    }
+    @if $breakpoint == big-mobile {
+        @media (max-width: 480px) {
+            @content;
+        }
+    }
+    @if $breakpoint == mobile {
+        @media (max-width: 320px) {
+            @content;
+        }
+    }
+}
+
+// @mixin font($breakpoint) {
+//     @if $breakpoint == gilroy-regular {
+//         font-family: 'Gilroy';
+//         font-style: normal;
+//         font-weight: 400;
+//     }
+// }
+
+// @mixin typography($breakpoint) {
+//     @if $breakpoint == gilroy-bold-70 {
+//         @include font(gilroy-bold);
+//         font-size: 70px;
+//         line-height: 105px;
+//     }
+// }
