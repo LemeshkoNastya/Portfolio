@@ -7,7 +7,7 @@
         margin: 0 auto;
     }
 
-    .list {
+    &__list {
         display: flex;
         justify-content: space-between;
         
@@ -19,6 +19,14 @@
             text-decoration: none;
             color: $color-white;
             @include typography(montserrat-16);
+            transition: all 1s;
+
+            &:hover {
+                border-bottom: 1px solid transparent;
+                border-image: $color-gradient;
+                border-image-slice: 1;
+                color: $color-chalky;
+            }
         }
     }
 }

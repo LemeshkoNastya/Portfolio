@@ -1,0 +1,109 @@
+.main {
+    width: 100%;
+    height: calc(100vh - 150px);
+    background: url(./../img/image-giphy.gif) right -160px no-repeat;
+    background-size: 800px 800px;
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        width: 750px;
+        margin-top: 92px;
+        margin-left: 10%;
+        background: url(./../img/text-frontend.png) left top no-repeat;
+
+        &__text-decoration {
+            @include typography(darto-120);
+            color: $color-mine-shaft;
+            font-weight: 600;
+        }
+
+        &__text {
+            @include typography(poiret-one-120);
+            color: $color-white;
+            margin-left: 37px;
+            margin-top: 100px;
+
+            span:nth-child(2) {
+                margin-left: 98px;
+            }
+        }
+    }
+
+    &__button {
+        width: 218px;
+        height: 60px;
+        background: $color-shark;
+        box-shadow: inset 10px 10px 30px $color-woodsmoke, inset -10px -10px 30px $color-tuna;
+        border-radius: 30px;
+        margin-top: 70px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: 13%;
+        position: relative;
+        cursor: pointer;
+        transition: 1s;
+
+        &__background {
+            position: absolute;
+            width: 200px;
+            height: 45px;
+            border-radius: 20px;
+            background: $color-shark;
+            box-shadow: 10px 10px 30px $color-woodsmoke;
+            filter: blur(2px);
+        }
+
+        &__text {
+            position: absolute;
+            @include typography(montserrat-18);
+            background: $color-gradient;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+
+            &__shadow {
+                position: absolute;
+                @include typography(montserrat-18);
+                background: $color-gradient;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                filter: blur(2px);
+            }
+        }
+
+        &:hover {
+            border: 2px solid $color-chalky;
+            transform: scale(1.05);
+        }
+    }
+
+    &__scroll {
+        width: 50px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        animation: mouse-move 1.5s infinite alternate;
+
+        &__mouse {
+            width: 23px;
+            height: 36.8px;
+        }
+
+        &__arrow {
+            width: 15px;
+            height: 7px;
+            margin-top: 14px;
+        }
+    }
+}
+
+@keyframes mouse-move {
+    0% {
+        margin-top: 0;
+    }
+    100% {
+        margin-top: -20px;
+    }
+}

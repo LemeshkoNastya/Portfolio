@@ -98,14 +98,14 @@ module.exports = {
         }),
         new CopyWebpackPlugin({
             patterns: [
-                // {
-                //     from: path.resolve(environment.paths.source, 'assets/img', ''),
-                //     to: path.resolve(environment.paths.output, 'assets/img', ''),
-                // },
-                // {
-                //     from: path.resolve(environment.paths.source, 'assets/icons', ''),
-                //     to: path.resolve(environment.paths.output, 'assets/icons', ''),
-                // },
+                {
+                    from: path.resolve(environment.paths.source, 'assets/img', ''),
+                    to: path.resolve(environment.paths.output, 'assets/img', ''),
+                },
+                {
+                    from: path.resolve(environment.paths.source, 'assets/icons', ''),
+                    to: path.resolve(environment.paths.output, 'assets/icons', ''),
+                },
                 // {
                 //     from: path.resolve(environment.paths.source, 'assets/audio', ''),
                 //     to: path.resolve(environment.paths.output, 'assets/audio', ''),

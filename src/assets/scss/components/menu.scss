@@ -1,0 +1,51 @@
+.menu {
+    position: fixed;
+    left: 35px;
+    top: 130px;
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+
+        &__item {
+            list-style: none;
+            margin-top: 40px;
+
+            &:first-child {
+                margin-top: 0;
+            }
+        }
+
+        &__link {
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        &__line {
+            background: $color-mine-shaft;
+            width: 2px;
+            height: 60px;
+            transition: 0.5s;
+
+            &_active {
+                background: $color-gradient;
+            }
+
+            &__shadow {
+                position: absolute;
+                top: 0;
+                left: 0;
+                background: $color-gradient;
+                width: 4px;
+                height: 60px;
+                filter: blur(4px);
+                cursor: pointer;
+            }
+
+            &:hover {
+                background: $color-white;
+            }
+        }
+    }
+}
