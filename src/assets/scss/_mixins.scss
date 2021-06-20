@@ -31,18 +31,46 @@
     }
 }
 
-// @mixin font($breakpoint) {
-//     @if $breakpoint == gilroy-regular {
-//         font-family: 'Gilroy';
-//         font-style: normal;
-//         font-weight: 400;
-//     }
-// }
+@mixin font($breakpoint) {
+    @if $breakpoint == montserrat-regular {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 400;
+    }
+    @if $breakpoint == montserrat-medium {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+    }
+    @if $breakpoint == poiret-one {
+        font-family: 'PoiretOne';
+        font-style: normal;
+        font-weight: 400;
+    }
+    @if $breakpoint == darto {
+        font-family: 'Darto';
+        font-style: normal;
+        font-weight: 400;
+    }
+}
 
-// @mixin typography($breakpoint) {
-//     @if $breakpoint == gilroy-bold-70 {
-//         @include font(gilroy-bold);
-//         font-size: 70px;
-//         line-height: 105px;
-//     }
-// }
+@mixin typography($breakpoint) {
+    @if $breakpoint == montserrat-18 {
+        @include font(montserrat-medium);
+        font-size: 18px;
+    }
+    @if $breakpoint == montserrat-16 {
+        @include font(montserrat-regular);
+        font-size: 16px;
+    }
+    @if $breakpoint == poiret-one-120 {
+        @include font(poiret-one);
+        font-size: 120px;
+    }
+    @if $breakpoint == darto-120 {
+        @include font(darto);
+        font-size: 144px;
+        line-height: 104px;
+        letter-spacing: 0.02em;
+    }
+}
