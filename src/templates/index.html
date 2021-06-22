@@ -12,10 +12,10 @@
     <nav class="header__menu">
       <ul class="header__list">
         <li class="header__list__item">
-          <a href="#" class="header__list__link">ОБО МНЕ</a>
+          <a href="#about" class="header__list__link">ОБО МНЕ</a>
         </li>
         <li class="header__list__item">
-          <a href="#" class="header__list__link">ПОРТФОЛИО</a>
+          <a href="#portfolio" class="header__list__link">ПОРТФОЛИО</a>
         </li>
         <li class="header__list__item">
           <a href="#" class="header__list__link">НАВЫКИ</a>
@@ -34,10 +34,10 @@
           <div class="menu__list__line__shadow"></div>
         </li>
         <li class="menu__list__item">
-          <a href="#" class="menu__list__link"><div class="menu__list__line"></div></a>
+          <a href="#about" class="menu__list__link"><div class="menu__list__line"></div></a>
         </li>
         <li class="menu__list__item">
-          <a href="#" class="menu__list__link"><div class="menu__list__line"></div></a>
+          <a href="#portfolio" class="menu__list__link"><div class="menu__list__line"></div></a>
         </li>
         <li class="menu__list__item">
           <a href="#" class="menu__list__link"><div class="menu__list__line"></div></a>
@@ -64,7 +64,7 @@
         <img class="main__scroll__arrow" src="./assets/icons/arrow.svg" alt="icon arrow">
       </div>
     </section>
-    <section class="about">
+    <section id="about" class="about">
       <img src="./assets/img/about.png" alt="title" class="about__title">
       <div class="about__content">
         <img src="./assets/img/image-me.jpg" alt="image me" class="about__image">
@@ -90,6 +90,29 @@
             </span>
             <span><эмодзи сто процентов></span>
           </p>
+        </div>
+      </div>
+    </section>
+    <section id="portfolio" class="portfolio">
+      <img src="./assets/img/portfolio.png" alt="title" class="portfolio__title">
+      <div class="portfolio__slider">
+        <div class="portfolio__works">
+          <img src="./assets/img/portfolio1.png" alt="image work" class="portfolio__works__item">
+          <img src="./assets/img/portfolio2.png" alt="image work" class="portfolio__works__item portfolio__works__item_active">
+          <img src="./assets/img/portfolio3.png" alt="image work" class="portfolio__works__item">
+        </div>
+        <div class="portfolio__arrow">
+          <svg class="portfolio__arrow__left">
+            <use xlink:href="./assets/icons/icons.svg#left"></use>
+          </svg>
+          <svg class="portfolio__arrow__right">
+            <use xlink:href="./assets/icons/icons.svg#right"></use>
+          </svg>
+        </div>
+        <div class="portfolio__pagination">
+          <div class="portfolio__pagination__item"></div>
+          <div class="portfolio__pagination__item portfolio__pagination__item_active"></div>
+          <div class="portfolio__pagination__item"></div>
         </div>
       </div>
     </section>
