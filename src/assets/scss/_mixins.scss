@@ -60,6 +60,10 @@
 }
 
 @mixin typography($breakpoint) {
+    @if $breakpoint == montserrat-24 {
+        @include font(montserrat-regular);
+        font-size: 24px;
+    }
     @if $breakpoint == montserrat-18 {
         @include font(montserrat-medium);
         font-size: 18px;
