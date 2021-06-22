@@ -31,6 +31,17 @@
         @include resolution(desktop) {
             width: 70%;
         }
+
+        .portfolio__background {
+            position: absolute;
+            top: 10%;
+            width: 80%;
+            height: 45%;
+            background: $color-gradient;
+            border-radius: 400px / 100px;
+            filter: blur(100px);
+            opacity: 0.35;
+        }
     }
 
     &__works {
@@ -38,6 +49,7 @@
         justify-content: space-between;
         align-items: center;
         width: 972px;
+        position: relative;
 
         @include resolution(desktop) {
             width: 850px;
@@ -54,6 +66,7 @@
         &__item {
             width: 178px;
             height: 95px;
+            cursor: pointer;
 
             @include resolution(tablet) {
                 width: 20%;
@@ -112,14 +125,15 @@
             top: 25%;
         }
 
-        &__left {
+        &__left, &__right {
             width: 392px;
             height: 104px;
-        }
+            cursor: pointer;
+            transition: 1s;
 
-        &__right {
-            width: 392px;
-            height: 104px;
+            &:hover {
+                
+            }
         }
     }
 
