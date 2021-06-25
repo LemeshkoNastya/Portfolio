@@ -68,9 +68,21 @@
         @include font(montserrat-medium);
         font-size: 18px;
     }
+    @if $breakpoint == montserrat-18-regular {
+        @include font(montserrat-regular);
+        font-size: 18px;
+    }
     @if $breakpoint == montserrat-16 {
         @include font(montserrat-regular);
         font-size: 16px;
+    }
+    @if $breakpoint == montserrat-14 {
+        @include font(montserrat-regular);
+        font-size: 14px;
+    }
+    @if $breakpoint == montserrat-14-medium {
+        @include font(montserrat-medium);
+        font-size: 14px;
     }
     @if $breakpoint == poiret-one-120 {
         @include font(poiret-one);
