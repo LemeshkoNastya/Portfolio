@@ -2,10 +2,19 @@
 const classHeaderListLink = '.header__list__link';
 const classMenuListLink = '.menu__list__link';
 const attributeHref = 'href';
+const section = 'section';
+const classHeader = '.header';
+const classMenuListLine = '.menu__list__line';
+const classMenuListLineActive = 'menu__list__line_active';
+const layoutMenuLineShadow = `<div class="menu__list__line__shadow"></div>`;
 
 // Variables
 const headerListLink = document.querySelectorAll(classHeaderListLink);
 const menu = document.querySelectorAll(classMenuListLink);
+
+const sections = document.querySelectorAll(section);
+const header = document.querySelector(classHeader);
+const menuListLine = document.querySelectorAll(classMenuListLine);
 
 // Functions
 const scrollSection = (listLink) => {
@@ -21,7 +30,25 @@ const scrollSection = (listLink) => {
             }
         });
     });
-}
+};
+
+window.addEventListener('scroll', () => {
+    let scrollDistance = window.scrollY;
+    
+    sections.forEach((el, i) => {
+        
+        if (el.offsetTop - header.clientHeight <= scrollDistance) {
+            menuListLine.forEach(el => {
+                if (el.classList.contains(classMenuListLineActive)) {
+                    el.classList.remove(classMenuListLineActive);
+                    el.innerHTML = '';
+                }
+            })
+            menuListLine[i].classList.add(classMenuListLineActive);
+            menuListLine[i].innerHTML = layoutMenuLineShadow;
+        }
+    })
+})
 
 scrollSection(headerListLink);
 scrollSection(menu);
