@@ -11,6 +11,21 @@
 
 body {
   background-color: $color-black;
+
+  &::-webkit-scrollbar {
+    width: 20px;
+    border-radius: 20px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border: 1px solid $color-chalky;
+    border-radius: 20px;
+  }
+
+  &::-webkit-scrollbar-track {
+    -webkit-box-shadow: -10px -10px 20px $color-mine-shaft-opacity inset;
+    border-radius: 20px;
+  }
 }
 
 @import "./components/header";
