@@ -74,10 +74,9 @@
                 position: absolute;
                 top: 0;
                 left: 0;
+                z-index: -1;
                 background: $color-gradient;
-                width: 4px;
-                height: 60px;
-                filter: blur(4px);
+                filter: blur(2px);
                 cursor: pointer;
 
                 @include resolution(very-big-desktop) {
