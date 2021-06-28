@@ -73,7 +73,7 @@
 
     &__text {
         margin-top: 45px;
-        @include typography(montserrat-18-regular);
+        @include typography(montserrat-16);
         color: $color-white;
         width: 574px;
     }
