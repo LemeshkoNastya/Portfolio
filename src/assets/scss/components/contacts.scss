@@ -38,6 +38,11 @@
             list-style: none;
             text-decoration: none;
             margin-bottom: 15px;
+            transition: 1s;
+
+            &:hover {
+                font-size: 14.5px;
+            }
 
             &__email::before {
                 content: "";
