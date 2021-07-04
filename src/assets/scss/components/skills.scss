@@ -41,29 +41,6 @@
         border-radius: 50%;
         box-shadow: inset -18px -18px 40px $color-tuna, inset 18px 18px 40px $color-woodsmoke;
 
-        &__color {
-            position: absolute;
-            // width: 100%;
-            // height: 100%;
-            // background: $color-gradient;
-            border-radius: 50%;
-            // z-index: -1;
-
-
-            width: 160px;
-            height: 160px;
-            border: 28px solid $color-gradient;
-            border-radius: 100%;
-
-            // &__inner {
-            //     position: absolute;
-            //     width: 100px;
-            //     height: 100px;
-            //     background: $color-shark;
-            //     border-radius: 50%;
-            // }
-        }
-
         &__inner {
             width: 100px;
             height: 100px;
@@ -79,4 +56,16 @@
         margin-top: 18px;
         text-align: center;
     }
+}
+
+.skills__circle__animation {
+    position: absolute;
+}
+
+.skills__circle__progress {
+    transform-origin: center;
+    transform: rotate(-90deg);
+    transition: stroke-dashoffset 2s linear;
+    stroke-dasharray: 408.4070449666731;
+    stroke-dashoffset: 408.4070449666731;
 }

@@ -24,7 +24,7 @@ const scrollElement = (element) => {
     
         const href = this.getAttribute(attributeHref).substring(1);
         const scrollTarget = document.getElementById(href);
-    
+
         if (scrollTarget) {
             scrollTarget.scrollIntoView({ behavior: 'smooth' });
         }
