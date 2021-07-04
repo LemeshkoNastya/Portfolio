@@ -13,7 +13,8 @@
         flex-wrap: wrap;
         justify-content: space-between;
         margin-top: 110px;
-        width: 1152px;
+        // width: 1152px;
+        width: 81%;
     }
 
     &__item {
@@ -22,11 +23,28 @@
         // justify-content: center;
         align-items: center;
         width: 160px;
-        margin-left: 118px;
+        // margin-left: 118px;
+        margin-left: 11%;
         margin-bottom: 55px;
 
         &:nth-child(1),  &:nth-child(5){
             margin-left: 0;
+        }
+
+        @media (max-width: 1180px) {
+            &:nth-child(4) {
+                margin-left: 0;
+                margin-right: 11%;
+            }
+
+            &:nth-child(7) {
+                margin-left: 22%;
+            }
+
+            &:nth-child(8) {
+                margin-left: 0;
+                margin-right: 20%;
+            }
         }
     }
 
