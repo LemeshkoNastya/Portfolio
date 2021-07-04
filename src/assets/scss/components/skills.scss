@@ -13,8 +13,15 @@
         flex-wrap: wrap;
         justify-content: space-between;
         margin-top: 110px;
-        // width: 1152px;
-        width: 81%;
+        width: 75%;
+
+        @include resolution(very-big-desktop) {
+            width: 1400px;
+        }
+
+        @media (max-width: 1475px) {
+            width: 81%;
+        }
 
         @include resolution(tablet) {
             width: 60%;
@@ -33,11 +40,19 @@
         align-items: center;
         width: 160px;
         // margin-left: 118px;
-        margin-left: 11%;
+        margin-left: 14%;
         margin-bottom: 55px;
 
         &:nth-child(1),  &:nth-child(5){
             margin-left: 0;
+        }
+
+        @include resolution(very-big-desktop) {
+            margin-left: 240px;
+        }
+
+        @media (max-width: 1441px) {
+            margin-left: 11%;
         }
 
         @media (max-width: 1180px) {
