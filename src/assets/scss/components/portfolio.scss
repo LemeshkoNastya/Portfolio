@@ -1,4 +1,5 @@
 .portfolio {
+    position: relative;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -20,86 +21,71 @@
         }
     }
 
+    &__background {
+        position: absolute;
+        top: 350px;
+        width: 80%;
+        height: 30%;
+        background: $color-gradient;
+        border-radius: 400px / 100px;
+        filter: blur(100px);
+        opacity: 0.2;
+    }
+
     &__slider {
         display: flex;
-        align-items: center;
         flex-direction: column;
-        width: 1169px;
-        margin-top: 160px;
-        position: relative;
-
-        @include resolution(desktop) {
-            width: 70%;
-        }
-
-        .portfolio__background {
-            position: absolute;
-            top: 10%;
-            width: 80%;
-            height: 45%;
-            background: $color-gradient;
-            border-radius: 400px / 100px;
-            filter: blur(100px);
-            opacity: 0.35;
-        }
-    }
-
-    &__works {
-        display: flex;
-        justify-content: space-between;
+        justify-content: flex-start;
         align-items: center;
-        width: 972px;
-        position: relative;
+        width: 1169px;
+        height: 500px;
+        margin-top: 160px;
 
-        @include resolution(desktop) {
-            width: 850px;
+        .swiper-wrapper {
+            position: relative;
+            display: flex;
+            align-items: center;
+            height: 208px;
         }
 
-        @include resolution(small-desktop) {
-            width: 650px;
-        }
-
-        @include resolution(tablet) {
-            width: 100%;
-        }
-
-        &__item {
+        .swiper-slide {
+            display: flex;
+            justify-content: center;
             width: 178px;
             height: 95px;
+            transition: all 1s;
             cursor: pointer;
-
-            @include resolution(tablet) {
-                width: 20%;
-                height: 20%;
-            }
-
-            &_active {
-                width: 480px;
-                height: 270px;
-
-                @include resolution(desktop) {
-                    width: 400px;
-                    height: 225px;
-                }
-
-                @include resolution(small-desktop) {
-                    width: 250px;
-                    height: 140px;
-                }
-
-                @include resolution(tablet) {
-                    width: 48%;
-                    height: 50%;
+        
+            &-active {
+                width: 390px;
+                height: 208px;
+        
+                img {
+                    width: 100%;
+                    height: 100%;
                 }
             }
         }
     }
+
+
+    // &__image {
+    //     width: 178px;
+    //     height: 95px;
+    //     cursor: pointer;
+
+    //     &_active {
+    //         width: 480px;
+    //         height: 270px;
+    //     }
+    // }
 
     &__arrow {
         position: absolute;
         display: flex;
         justify-content: center;
         top: 230px;
+        // top: 600px;
         width: 770px;
 
         @include resolution(desktop) {
@@ -125,6 +111,19 @@
             top: 25%;
         }
 
+        // &__left, &__right {
+        //     width: 392px;
+        //     height: 104px;
+        //     cursor: pointer;
+        //     transition: 1s;
+
+        //     &:hover {
+                
+        //     }
+        // }
+    }
+
+    .arrow {
         &__left, &__right {
             width: 392px;
             height: 104px;
@@ -140,19 +139,87 @@
     &__pagination {
         display: flex;
         justify-content: space-between;
-        margin-top: 145px;
+        margin-top: 200px;
         width: 84px;
+        cursor: pointer;
 
-        &__item {
-            width: 12px;
-            height: 12px;
-            background: $color-mine-shaft;
-            border-radius: 10px;
+        // &__item {
+        //     width: 12px;
+        //     height: 12px;
+        //     background: $color-mine-shaft;
+        //     border-radius: 10px;
             
-            &_active {
-                width: 30px;
-                background: $color-gradient;
-            }
-        }
+        //     &_active {
+        //         width: 30px;
+        //         background: $color-gradient;
+        //     }
+        // }
+    }
+}
+
+
+
+
+// .slider {
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: flex-start;
+//     align-items: center;
+//     width: 1169px;
+//     height: 500px;
+//     margin-top: 160px;
+// }
+
+// .slider .swiper-wrapper {
+//     position: relative;
+//     display: flex;
+//     align-items: center;
+//     height: 208px;
+// }
+
+// .slider .swiper-slide {
+//     display: flex;
+//     justify-content: center;
+//     width: 178px;
+//     height: 95px;
+//     transition: all 1s;
+//     cursor: pointer;
+
+//     &-active {
+//         width: 390px;
+//         height: 208px;
+
+//         img {
+//             width: 100%;
+//             height: 100%;
+//         }
+//     }
+// }
+
+// .portfolio__background {
+//     position: absolute;
+//     top: 350px;
+//     width: 80%;
+//     height: 30%;
+//     background: $color-gradient;
+//     border-radius: 400px / 100px;
+//     filter: blur(100px);
+//     opacity: 0.2;
+// }
+
+.swiper-pagination-fraction, .swiper-pagination-custom, .swiper-container-horizontal > .swiper-pagination-bullets {
+    width: 105px;
+}
+
+.swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+    background: $color-mine-shaft;
+    border-radius: 10px;
+    opacity: 1;
+
+    &-active {
+        width: 45px;
+        background: $color-gradient;
     }
 }

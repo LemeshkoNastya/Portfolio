@@ -26,31 +26,31 @@
       </ul>
     </nav>
   </header>
+  <nav class="menu">
+    <ul class="menu__list">
+      <li class="menu__list__item">
+        <!-- <div class="menu__list__line__shadow"></div> -->
+        <a href="#main" class="menu__list__link">
+          <div class="menu__list__line menu__list__line_active">
+            <div class="menu__list__line__shadow"></div>
+          </div>
+        </a>
+      </li>
+      <li class="menu__list__item">
+        <a href="#about" class="menu__list__link"><div class="menu__list__line"></div></a>
+      </li>
+      <li class="menu__list__item">
+        <a href="#portfolio" class="menu__list__link"><div class="menu__list__line"></div></a>
+      </li>
+      <li class="menu__list__item">
+        <a href="#skills" class="menu__list__link"><div class="menu__list__line"></div></a>
+      </li>
+      <li class="menu__list__item">
+        <a href="#contacts" class="menu__list__link"><div class="menu__list__line"></div></a>
+      </li>
+    </ul>
+  </nav>
   <main>
-    <nav class="menu">
-      <ul class="menu__list">
-        <li class="menu__list__item">
-          <!-- <div class="menu__list__line__shadow"></div> -->
-          <a href="#main" class="menu__list__link">
-            <div class="menu__list__line menu__list__line_active">
-              <div class="menu__list__line__shadow"></div>
-            </div>
-          </a>
-        </li>
-        <li class="menu__list__item">
-          <a href="#about" class="menu__list__link"><div class="menu__list__line"></div></a>
-        </li>
-        <li class="menu__list__item">
-          <a href="#portfolio" class="menu__list__link"><div class="menu__list__line"></div></a>
-        </li>
-        <li class="menu__list__item">
-          <a href="#skills" class="menu__list__link"><div class="menu__list__line"></div></a>
-        </li>
-        <li class="menu__list__item">
-          <a href="#contacts" class="menu__list__link"><div class="menu__list__line"></div></a>
-        </li>
-      </ul>
-    </nav>
     <section id="main" class="main">
       <div class="main__info">
         <div class="main__info__text">
@@ -99,26 +99,18 @@
     </section>
     <section id="portfolio" class="portfolio">
       <img src="./assets/img/portfolio.png" alt="title" class="portfolio__title">
-      <div class="portfolio__slider">
-        <div class="portfolio__background"></div>
-        <div class="portfolio__works">
-          <img src="./assets/img/portfolio1.png" alt="image work" class="portfolio__works__item">
-          <img src="./assets/img/portfolio2.png" alt="image work" class="portfolio__works__item portfolio__works__item_active">
-          <img src="./assets/img/portfolio3.png" alt="image work" class="portfolio__works__item">
-        </div>
-        <div class="portfolio__arrow">
-          <svg class="portfolio__arrow__left">
+      <div class="portfolio__background"></div>
+      <div class="swiper-container portfolio__slider">
+        <div class="swiper-wrapper"></div>
+        <div class="portfolio__arrow arrow">
+          <svg class="arrow__left">
             <use xlink:href="./assets/icons/icons.svg#left"></use>
           </svg>
-          <svg class="portfolio__arrow__right">
+          <svg class="arrow__right">
             <use xlink:href="./assets/icons/icons.svg#right"></use>
           </svg>
         </div>
-        <div class="portfolio__pagination">
-          <div class="portfolio__pagination__item"></div>
-          <div class="portfolio__pagination__item portfolio__pagination__item_active"></div>
-          <div class="portfolio__pagination__item"></div>
-        </div>
+        <div class="portfolio__pagination"></div>
       </div>
     </section>
     <section id="skills" class="skills">
