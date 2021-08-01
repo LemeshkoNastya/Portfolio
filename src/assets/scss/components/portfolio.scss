@@ -57,6 +57,7 @@
             cursor: pointer;
         
             &-active {
+                position: relative;
                 width: 390px;
                 height: 208px;
         
@@ -64,28 +65,33 @@
                     width: 100%;
                     height: 100%;
                 }
+
+                .slide__hover {
+                    position: absolute;
+                    // display: none;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    width: 100%;
+                    height: 100%;
+                    background: $color-shark-opacity;
+                    opacity: 0;
+                    transition: all 0.5s;
+
+                    &_active {
+                        // display: block;
+                        opacity: 1;
+                    }
+                }
             }
         }
     }
-
-
-    // &__image {
-    //     width: 178px;
-    //     height: 95px;
-    //     cursor: pointer;
-
-    //     &_active {
-    //         width: 480px;
-    //         height: 270px;
-    //     }
-    // }
 
     &__arrow {
         position: absolute;
         display: flex;
         justify-content: center;
         top: 230px;
-        // top: 600px;
         width: 770px;
 
         @include resolution(desktop) {
@@ -110,17 +116,6 @@
         @include resolution(big-mobile) {
             top: 25%;
         }
-
-        // &__left, &__right {
-        //     width: 392px;
-        //     height: 104px;
-        //     cursor: pointer;
-        //     transition: 1s;
-
-        //     &:hover {
-                
-        //     }
-        // }
     }
 
     .arrow {
@@ -129,10 +124,6 @@
             height: 104px;
             cursor: pointer;
             transition: 1s;
-
-            &:hover {
-                
-            }
         }
     }
 
@@ -142,70 +133,59 @@
         margin-top: 200px;
         width: 84px;
         cursor: pointer;
+    }
 
-        // &__item {
-        //     width: 12px;
-        //     height: 12px;
-        //     background: $color-mine-shaft;
-        //     border-radius: 10px;
-            
-        //     &_active {
-        //         width: 30px;
-        //         background: $color-gradient;
-        //     }
-        // }
+    &__text {
+        // margin: 50px 0 30px;
+        margin: 50px 0;
+        @include typography(montserrat-24);
+        color: $color-white;
+    }
+
+    &__button {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        // margin: 35px 0 100px;
+        width: 190px;
+        height: 50px;
+        background: $color-shark;
+        box-shadow: inset 10px 10px 30px $color-woodsmoke, inset -10px -10px 30px $color-tuna;
+        border-radius: 30px;
+        cursor: pointer;
+        transition: 1s;
+
+        &__background {
+            position: absolute;
+            width: 170px;
+            height: 35px;
+            border-radius: 20px;
+            background: $color-shark;
+            box-shadow: 10px 10px 30px $color-woodsmoke;
+            filter: blur(2px);
+        }
+
+        &__text {
+            position: absolute;
+            @include typography(montserrat-14-medium);
+            background: white;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        &:hover {
+            border: 2px solid $color-chalky;
+            transform: scale(1.05);
+
+            .portfolio__button__text {
+                background: $color-gradient;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+        }
     }
 }
-
-
-
-
-// .slider {
-//     display: flex;
-//     flex-direction: column;
-//     justify-content: flex-start;
-//     align-items: center;
-//     width: 1169px;
-//     height: 500px;
-//     margin-top: 160px;
-// }
-
-// .slider .swiper-wrapper {
-//     position: relative;
-//     display: flex;
-//     align-items: center;
-//     height: 208px;
-// }
-
-// .slider .swiper-slide {
-//     display: flex;
-//     justify-content: center;
-//     width: 178px;
-//     height: 95px;
-//     transition: all 1s;
-//     cursor: pointer;
-
-//     &-active {
-//         width: 390px;
-//         height: 208px;
-
-//         img {
-//             width: 100%;
-//             height: 100%;
-//         }
-//     }
-// }
-
-// .portfolio__background {
-//     position: absolute;
-//     top: 350px;
-//     width: 80%;
-//     height: 30%;
-//     background: $color-gradient;
-//     border-radius: 400px / 100px;
-//     filter: blur(100px);
-//     opacity: 0.2;
-// }
 
 .swiper-pagination-fraction, .swiper-pagination-custom, .swiper-container-horizontal > .swiper-pagination-bullets {
     width: 105px;

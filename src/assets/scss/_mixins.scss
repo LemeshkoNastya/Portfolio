@@ -36,59 +36,59 @@
     }
 }
 
-@mixin font($breakpoint) {
-    @if $breakpoint == montserrat-regular {
+@mixin font($font) {
+    @if $font == montserrat-regular {
         font-family: 'Montserrat';
         font-style: normal;
         font-weight: 400;
     }
-    @if $breakpoint == montserrat-medium {
+    @if $font == montserrat-medium {
         font-family: 'Montserrat';
         font-style: normal;
         font-weight: 500;
     }
-    @if $breakpoint == poiret-one {
+    @if $font == poiret-one {
         font-family: 'Poiret One';
         font-style: normal;
         font-weight: 400;
     }
-    @if $breakpoint == darto {
+    @if $font == darto {
         font-family: 'Darto';
         font-style: normal;
         font-weight: 400;
     }
 }
 
-@mixin typography($breakpoint) {
-    @if $breakpoint == montserrat-24 {
+@mixin typography($font) {
+    @if $font == montserrat-24 {
         @include font(montserrat-regular);
         font-size: 24px;
     }
-    @if $breakpoint == montserrat-18 {
+    @if $font == montserrat-18 {
         @include font(montserrat-medium);
         font-size: 18px;
     }
-    @if $breakpoint == montserrat-18-regular {
+    @if $font == montserrat-18-regular {
         @include font(montserrat-regular);
         font-size: 18px;
     }
-    @if $breakpoint == montserrat-16 {
+    @if $font == montserrat-16 {
         @include font(montserrat-regular);
         font-size: 16px;
     }
-    @if $breakpoint == montserrat-14 {
+    @if $font == montserrat-14 {
         @include font(montserrat-regular);
         font-size: 14px;
     }
-    @if $breakpoint == montserrat-14-medium {
+    @if $font == montserrat-14-medium {
         @include font(montserrat-medium);
         font-size: 14px;
     }
-    @if $breakpoint == poiret-one-120 {
+    @if $font == poiret-one-120 {
         @include font(poiret-one);
         font-size: 120px;
     }
-    @if $breakpoint == darto-120 {
+    @if $font == darto-120 {
         @include font(darto);
         font-size: 144px;
         line-height: 104px;
