@@ -126,17 +126,17 @@
     }
 
     &__button {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 70px;
+        margin-left: 13%;
         width: 218px;
         height: 60px;
         background: $color-shark;
         box-shadow: inset 10px 10px 30px $color-woodsmoke, inset -10px -10px 30px $color-tuna;
         border-radius: 30px;
-        margin-top: 70px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-left: 13%;
-        position: relative;
         text-decoration: none;
         cursor: pointer;
         transition: 1s;

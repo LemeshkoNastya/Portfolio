@@ -2,32 +2,40 @@ import Swiper from 'swiper';
 import 'swiper/swiper-bundle.css';
 import SwiperCore, { Navigation, Pagination } from 'swiper/core';
 
+import works from './works';
+import { showPopup} from './popup';
+
 SwiperCore.use([Navigation, Pagination]);
 
 const slider = '.portfolio__slider';
 const arrowNext = '.arrow__right';
 const arrowPrev = '.arrow__left';
 const pagination = '.portfolio__pagination';
+const classTitle = 'portfolio__text';
+const classButton = 'portfolio__button';
+const classBackgroundButton ='portfolio__button__background';
+const classTextButton = 'portfolio__button__text';
 const classContainerSlider = '.swiper-wrapper';
 const classActive = 'swiper-slide-active';
 const classHoverSlide = 'slide__hover';
 const classHoverSlideActive = 'slide__hover_active';
 const classSlide = 'swiper-slide';
+const textButton = 'ПОДРОБНЕЕ';
 
 const countViewSlides = 3;
 const morph = 1000;
-const countSlides = 3;
+const timeOpenPopup = 500;
 
 const containerSlider = document.querySelector(classContainerSlider);
 
-for (let i = 0; i < countSlides; i++) {
+works.forEach(work => {
     containerSlider.innerHTML += `
         <div class="${classSlide}">
-            <img src="./assets/img/portfolio${i + 1}.png" alt="image work">
+            <img src=${work.img.src} alt=${work.img.alt}>
             <div class="${classHoverSlide}"></div>
         </div>
     `;
-}
+});
 
 const slides = document.querySelectorAll('.' + classSlide);
 const hoverSlides = document.querySelectorAll('.' + classHoverSlide);
@@ -37,12 +45,16 @@ slides.forEach((slide,index) => {
         if (slide.classList.contains(classActive)) {
             hoverSlides[index].classList.add(classHoverSlideActive);
             hoverSlides[index].innerHTML = `
-                <span class="portfolio__text">Landing Page</span>
-                <div class="portfolio__button">
-                    <div class="portfolio__button__background"></div>
-                    <span class="portfolio__button__text">ПОДРОБНЕЕ</span>
+                <span class="${classTitle}">${works[index].name}</span>
+                <div class="${classButton}">
+                    <div class="${classBackgroundButton}"></div>
+                    <span class="${classTextButton}">${textButton}</span>
                 </div>
             `;
+
+            document.querySelector(`.${classButton}`).addEventListener('click', () => {
+                setTimeout(() => showPopup(index), timeOpenPopup);
+            });
         }
     });
 

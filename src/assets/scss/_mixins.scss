@@ -47,6 +47,16 @@
         font-style: normal;
         font-weight: 500;
     }
+    @if $font == montserrat-medium-italic {
+        font-family: 'Montserrat';
+        font-style: italic;
+        font-weight: 500;
+    }
+    @if $font == montserrat-bold {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 700;
+    }
     @if $font == poiret-one {
         font-family: 'Poiret One';
         font-style: normal;
@@ -60,12 +70,20 @@
 }
 
 @mixin typography($font) {
+    @if $font == montserrat-36 {
+        @include font(montserrat-bold);
+        font-size: 36px;
+    }
     @if $font == montserrat-24 {
         @include font(montserrat-regular);
         font-size: 24px;
     }
     @if $font == montserrat-18 {
         @include font(montserrat-medium);
+        font-size: 18px;
+    }
+    @if $font == montserrat-18-italic {
+        @include font(montserrat-medium-italic);
         font-size: 18px;
     }
     @if $font == montserrat-18-regular {
