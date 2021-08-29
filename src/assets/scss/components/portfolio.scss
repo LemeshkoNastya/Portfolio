@@ -24,7 +24,7 @@
     &__background {
         position: absolute;
         top: 350px;
-        width: 80%;
+        width: 70%;
         height: 30%;
         background: $color-gradient;
         border-radius: 400px / 100px;
@@ -41,6 +41,10 @@
         height: 500px;
         margin-top: 160px;
 
+        @include resolution(desktop) {
+            width: 70%;
+        }
+
         .swiper-wrapper {
             position: relative;
             display: flex;
@@ -55,11 +59,31 @@
             height: 95px;
             transition: all 1s;
             cursor: pointer;
+
+            @include resolution(tablet) {
+                width: 20%;
+                height: 20%;
+            }
         
             &-active {
                 position: relative;
                 width: 390px;
                 height: 230px;
+
+                @include resolution(desktop) {
+                    width: 400px;
+                    height: 225px;
+                }
+
+                @include resolution(small-desktop) {
+                    width: 250px;
+                    height: 140px;
+                }
+
+                @include resolution(tablet) {
+                    width: 48%;
+                    height: 50%;
+                }
         
                 img {
                     width: 100%;
@@ -68,7 +92,6 @@
 
                 .slide__hover {
                     position: absolute;
-                    // display: none;
                     display: flex;
                     flex-direction: column;
                     align-items: center;
@@ -79,7 +102,6 @@
                     transition: all 0.5s;
 
                     &_active {
-                        // display: block;
                         opacity: 1;
                     }
                 }
@@ -101,7 +123,7 @@
 
         @include resolution(small-desktop) {
             width: 460px;
-            top: 130px;
+            top: 170px;
         }
 
         @include resolution(tablet) {
@@ -136,7 +158,6 @@
     }
 
     &__text {
-        // margin: 50px 0 30px;
         margin: 50px 0;
         @include typography(montserrat-24);
         color: $color-white;
@@ -147,7 +168,6 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        // margin: 35px 0 100px;
         width: 190px;
         height: 50px;
         background: $color-shark;
