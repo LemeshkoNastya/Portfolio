@@ -6,14 +6,26 @@
     background: url(./../img/giphy.gif) right 135px no-repeat;
     background-size: 700px 700px;
 
+    @include resolution(small-desktop) {
+        background: none;
+    }
+
     &__title {
         width: 422px;
+
+        @include resolution(tablet) {
+            width: 350px;
+        }
+
+        @include resolution(big-mobile) {
+            width: 250px;
+        }
     }
 
     &__content {
         display: flex;
         flex-direction: column;
-        width: 1173px;
+        width: 80%;
     }
 
     &__info {
@@ -22,15 +34,36 @@
         margin-top: 135px;
         width: 310px;
 
+        @include resolution(tablet) {
+            width: 100%;
+            align-items: center;
+        }
+
         &__text {
             @include typography(montserrat-18-regular);
             color: $color-white;
+
+            @include resolution(tablet) {
+                text-align: center;
+            }
+
+            @include resolution(big-mobile) {
+               font-size: 16px;
+            }
         }
 
         &__social {
             display: flex;
             flex-direction: column;
             margin-top: 18px;
+
+            @include resolution(tablet) {
+                width: 300px;
+            }
+
+            @include resolution(big-mobile) {
+                width: 250px;
+            }
         }
 
         &__link {
@@ -53,6 +86,10 @@
                 width: 25px;
                 height: 25px;
                 background-image: url('./../icons/email.svg');
+
+                @include resolution(big-mobile) {
+                    margin-bottom: 5px;
+                 }
             }
 
             &__telegram::before {
@@ -78,56 +115,19 @@
     }
 
     &__text {
-        margin-top: 45px;
+        margin: 50px 0 150px;
         @include typography(montserrat-16);
+        line-height: 24px;
         color: $color-white;
         width: 574px;
-    }
 
-    &__button {
-        position: relative;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin: 35px 0 100px;
-        width: 243px;
-        height: 60px;
-        background: $color-shark;
-        box-shadow: inset 10px 10px 30px $color-woodsmoke, inset -10px -10px 30px $color-tuna;
-        border-radius: 30px;
-        cursor: pointer;
-        transition: 1s;
-
-        &__background {
-            position: absolute;
-            width: 223px;
-            height: 45px;
-            border-radius: 20px;
-            background: $color-shark;
-            box-shadow: 10px 10px 30px $color-woodsmoke;
-            filter: blur(2px);
+        @include resolution(tablet) {
+            text-align: center;
+            width: 100%;
         }
 
-        &__text {
-            position: absolute;
-            @include typography(montserrat-14-medium);
-            background: $color-gradient;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-
-            &__shadow {
-                position: absolute;
-                @include typography(montserrat-14-medium);
-                background: $color-gradient;
-                -webkit-background-clip: text;
-                -webkit-text-fill-color: transparent;
-                filter: blur(2px);
-            }
-        }
-
-        &:hover {
-            border: 2px solid $color-chalky;
-            transform: scale(1.05);
-        }
+        @include resolution(big-mobile) {
+            margin: 50px 0 100px;
+         }
     }
 }
