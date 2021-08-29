@@ -6,6 +6,14 @@
 
     &__title {
         width: 320px;
+
+        @include resolution(tablet) {
+            width: 250px;
+        }
+
+        @include resolution(big-mobile) {
+            width: 180px;
+        }
     }
 
     &__content {
