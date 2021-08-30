@@ -154,7 +154,7 @@
         border-radius: 30px;
         text-decoration: none;
         cursor: pointer;
-        transition: 1s;
+        transition: transform 1s;
 
         @include resolution(very-big-desktop) {
             margin-top: 150px;
