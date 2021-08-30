@@ -27,10 +27,31 @@
     scrollbar-width: none;
     -ms-overflow-style: none;
 
+    @media (max-width: 1300px) {
+        left: 10%;
+    }
+
+    @include resolution(desktop) {
+        left: 12%;
+        width: 850px;
+    }
+
+    @include resolution(small-desktop) {
+        width: 650px;
+    }
+
+    @include resolution(tablet) {
+        width: 80%;
+    }
+
     &::-webkit-scrollbar {
         width: 20px;
         border-radius: 20px;
         background: $color-black;
+
+        @include resolution(desktop) {
+            width: 15px;
+        }
     }
     
     &::-webkit-scrollbar-thumb {
@@ -47,6 +68,15 @@
         margin: 50px 50px 0;
         @include typography(montserrat-36);
         color: $color-white;
+
+        @include resolution(tablet) {
+            font-size: 28px;
+        }
+
+        @include resolution(big-mobile) {
+            margin: 50px 20px 0;
+            font-size: 20px;
+        }
     }
 
     &__close {
@@ -61,6 +91,30 @@
         justify-content: space-between;
         align-items: center;
         margin: 50px 50px 0;
+
+        @include resolution(small-desktop) {
+            margin: 50px 0 0 50px;
+
+            img {
+                width: 250px; 
+            }
+        }
+
+        @include resolution(tablet) {
+            flex-direction: column-reverse;
+
+            img {
+                margin-bottom: 50px; 
+            }
+        }
+
+        @include resolution(big-mobile) {
+            margin: 50px 20px 0;
+
+            img {
+                width: 180px;
+            }
+        }
     }
 
     &__description {
@@ -74,6 +128,10 @@
     &__text {
         @include typography(montserrat-18);
         color: $color-white;
+
+        @include resolution(big-mobile) {
+            font-size: 14px;
+        }
     }
 
     &__link {
@@ -83,6 +141,10 @@
         background: $color-gradient;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
+
+        @include resolution(big-mobile) {
+            font-size: 14px;
+        }
     }
 
     &__deadline {
@@ -90,6 +152,10 @@
         max-width: 400px;
         @include typography(montserrat-18-regular);
         color: $color-white;
+
+        @include resolution(big-mobile) {
+            font-size: 14px;
+        }
     }
 
     &__line {
@@ -104,6 +170,18 @@
         p {
             @include typography(montserrat-18);
             color: $color-white;
+
+            @include resolution(big-mobile) {
+                font-size: 16px;
+            }
+        }
+
+        @include resolution(tablet) {
+            margin: 50px 0 0 50px;
+        }
+
+        @include resolution(big-mobile) {
+            margin: 50px 0 0 20px;
         }
     }
 
@@ -122,16 +200,46 @@
             &:not(:first-child) {
                 margin-top: 10px;
             }
+
+            @include resolution(big-mobile) {
+                font-size: 14px;
+            }
         }
     }
 
     &__code {
         margin: 50px 50px 0;
+
+        @include resolution(tablet) {
+            margin: 50px 0 0 50px;
+        }
+
+        @include resolution(big-mobile) {
+            margin: 50px 0 0 20px;
+        }
     }
 
     &__mockup {
         display: flex;
         justify-content: center;
         margin: 50px;
+
+        @include resolution(small-desktop) {
+            img {
+                width: 400px; 
+            }
+        }
+
+        @include resolution(tablet) {
+            img {
+                width: 100%; 
+            }
+        }
+
+        @include resolution(big-mobile) {
+            img {
+                width: 180px;
+            }
+        }
     }
 }
