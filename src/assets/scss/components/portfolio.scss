@@ -40,6 +40,8 @@
         width: 1169px;
         height: 500px;
         margin-top: 160px;
+        animation: zoomIn;
+        animation-duration: 2s;
 
         @include resolution(desktop) {
             width: 70%;

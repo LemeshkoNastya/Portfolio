@@ -32,6 +32,8 @@
     &__image {
         width: 428px;
         height: 570px;
+        animation: fadeIn;
+        animation-duration: 10s;
 
         @include resolution(desktop) {
             width: 400px;
@@ -75,6 +77,8 @@
 
         p {
             margin-top: 80px;
+            animation: fadeInRight;
+            animation-duration: 2s;
 
             @include resolution(small-desktop) {
                 margin-top: 50px;

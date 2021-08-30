@@ -48,6 +48,8 @@
         width: 160px;
         margin-left: 14%;
         margin-bottom: 55px;
+        animation: slideInUp;
+        animation-duration: 2s;
 
         &:nth-child(1),  &:nth-child(5){
             margin-left: 0;

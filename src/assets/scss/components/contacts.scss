@@ -33,6 +33,8 @@
         flex-direction: column;
         margin-top: 135px;
         width: 310px;
+        animation: fadeInLeft;
+        animation-duration: 2s;
 
         @include resolution(tablet) {
             width: 100%;
@@ -120,6 +122,8 @@
         line-height: 24px;
         color: $color-white;
         width: 574px;
+        animation: fadeInLeft;
+        animation-duration: 2s;
 
         @include resolution(tablet) {
             text-align: center;

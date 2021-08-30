@@ -1,4 +1,7 @@
+import "animate.css";
+import WOW from 'wow.js';
 
+new WOW().init();
 
 import './components/scroll';
 import './components/progress';
