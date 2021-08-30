@@ -1,5 +1,6 @@
 import works from './works';
 
+// Magic string
 const classBackground = '.background';
 const classPopup = '.popup';
 const classDisplayNone = 'none';
@@ -20,9 +21,11 @@ const classList = 'popup__list';
 const classCode = 'popup__code';
 const classMockup = 'popup__mockup';
 
+// Variables
 const backgroundPopup = document.querySelector(classBackground);
 const popup = document.querySelector(classPopup);
 
+// Functions
 const hidePopup = () => {
     backgroundPopup.style.display = classDisplayNone;
     popup.style.display = classDisplayNone;
@@ -36,10 +39,6 @@ export const showPopup = (indexSlide) => {
 
     createDescriptionPopup(indexSlide);
 }
-
-backgroundPopup.addEventListener('click', () => {
-    hidePopup();
-});
 
 const createDescriptionPopup = (indexSlide) => {
     popup.innerHTML = `
@@ -113,3 +112,8 @@ const createDescriptionPopup = (indexSlide) => {
         hidePopup();
     })
 }
+
+// Event
+backgroundPopup.addEventListener('click', () => {
+    hidePopup();
+});

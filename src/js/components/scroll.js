@@ -37,6 +37,7 @@ const scrollSection = (listLink) => {
     });
 };
 
+// Events
 window.addEventListener('scroll', () => {
     let scrollDistance = window.scrollY;
     

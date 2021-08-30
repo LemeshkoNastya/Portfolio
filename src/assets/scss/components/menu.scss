@@ -11,6 +11,10 @@
         top: 130px;
     }
 
+    @include resolution(big-mobile) {
+        left: 20px;
+    }
+
     &__list {
         display: flex;
         flex-direction: column;

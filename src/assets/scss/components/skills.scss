@@ -44,10 +44,8 @@
     &__item {
         display: flex;
         flex-direction: column;
-        // justify-content: center;
         align-items: center;
         width: 160px;
-        // margin-left: 118px;
         margin-left: 14%;
         margin-bottom: 55px;
 
@@ -90,10 +88,6 @@
                 margin-right: 0;
             }
         }
-
-        // @media (max-width: 600px) {
-        //     margin-left: 0;
-        // }
     }
 
     &__circle {
@@ -121,6 +115,10 @@
         color: $color-white;
         margin-top: 18px;
         text-align: center;
+
+        @include resolution(big-mobile) {
+            font-size: 16px;
+        }
     }
 }
 

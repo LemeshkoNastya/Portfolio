@@ -75,6 +75,17 @@
             width: 280px;
         }
 
+        @media (max-width: 360px) {
+            margin-left: 15%;
+            background-size: 250px 80px;
+            width: 250px;
+        }
+
+        @include resolution(mobile) {
+            width: 85%;
+            background-size: 85% 60px;
+        }
+
         &__text {
             @include typography(poiret-one-120);
             color: $color-white;
@@ -105,6 +116,10 @@
 
             @include resolution(big-mobile) {
                 font-size: 50px;
+            }
+
+            @include resolution(mobile) {
+                font-size: 40px;
             }
 
             span:nth-child(2) {
