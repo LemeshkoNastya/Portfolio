@@ -120,7 +120,7 @@ const works = [
         "demo": {
             "text": "Посмотреть работу клавиатуры можно по ссылке",
             "name": "Virtual-keyboard",
-            "link": "https://lemeshkonastya.github.io/Test-MBS/"
+            "link": "https://rolling-scopes-school.github.io/lemeshkonastya-JS2020Q3/virtual-keyboard/"
         },
         "deadline": "На выполнение работы потребовалось около 4 дней",
         "technologies": [
