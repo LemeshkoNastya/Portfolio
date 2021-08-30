@@ -11,4 +11,4 @@ import './components/loader';
 import './components/burger';
 
 // Styles
-import '../assets/scss/main.scss';
+import '../styles/main.scss';

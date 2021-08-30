@@ -1,7 +1,7 @@
 .main {
     width: 100%;
     height: calc(100vh - 150px);
-    background: url(./../img/image-giphy.gif) right -160px no-repeat;
+    background: url(./../assets/img/image-giphy.gif) right -160px no-repeat;
     background-size: 800px 800px;
 
     @include resolution(very-big-desktop) {
@@ -13,17 +13,17 @@
     }
 
     @include resolution(big-desktop) {
-        background: url(./../img/image-giphy.gif) right -100px no-repeat;
+        background: url(./../assets/img/image-giphy.gif) right -100px no-repeat;
         background-size: 600px 600px;
     }
 
     @include resolution(small-desktop) {
-        background: url(./../img/image-giphy.gif) 110% -60px no-repeat;
+        background: url(./../assets/img/image-giphy.gif) 110% -60px no-repeat;
         background-size: 500px 500px;
     }
 
     @media (max-width: 850px) {
-        background: url(./../img/image-giphy.gif) 110% -60px no-repeat;
+        background: url(./../assets/img/image-giphy.gif) 110% -60px no-repeat;
         background-size: 400px 400px;
     }
 
@@ -37,7 +37,7 @@
         width: 750px;
         margin-top: 92px;
         margin-left: 10%;
-        background: url(./../img/text-frontend.png) left top no-repeat;
+        background: url(./../assets/img/text-frontend.png) left top no-repeat;
 
         @include resolution(very-big-desktop) {
             margin-top: 200px;
