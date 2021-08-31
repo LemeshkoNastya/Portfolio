@@ -2,6 +2,8 @@
 
 ## Посмотреть сайт можно по [ссылке](https://lemeshkonastya.github.io/Portfolio)
 
+![Deploy project](https://github.com/LemeshkoNastya/Portfolio/blob/master/demo.gif)
+
 ### Технологии
 - Верстка выполнена с помощью HTML, CSS
 - Для ускорения написания стилей использовался препроцессор SASS
