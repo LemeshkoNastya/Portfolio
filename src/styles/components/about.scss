@@ -77,7 +77,7 @@
 
         p {
             margin-top: 80px;
-            animation: fadeInRight;
+            animation: fadeInUp;
             animation-duration: 2s;
 
             @include resolution(small-desktop) {
